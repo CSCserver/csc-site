@@ -6,7 +6,6 @@ body {
 
 /* Navbar */
 .navbar {
-    display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #ffffff;
@@ -55,9 +54,14 @@ body {
 
 @media only screen and (min-width: 768px) {
     .navbar {
-        display: block;
-        width: 100%;
-        padding-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #ffffff;
+        color: black;
+        padding: 10px 20px;
+        position: sticky;
+        top: 0;
     }
 }
 
