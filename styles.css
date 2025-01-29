@@ -13,7 +13,7 @@ body {
     padding: 10px 20px;
     position: sticky;
     top: 0;
-    display: none;
+    display: flex;
 }
 
 .logo img {
@@ -21,11 +21,16 @@ body {
 }
 
 .menu {
-    display: flex;
+    display: none;
     list-style: none;
     gap: 20px;
     margin: 0;
     padding: 0;
+}
+
+.pagesB img {
+    height: 50px;
+    display: block;
 }
 
 .menu li a {
@@ -40,7 +45,7 @@ body {
 
 .whatsapp a {
     text-decoration: none;
-    color: white;
+    color: black;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -53,15 +58,16 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-    .navbar {
+    .menu {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: #ffffff;
-        color: black;
-        padding: 10px 20px;
-        position: sticky;
-        top: 0;
+        list-style: none;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+    }
+    .pagesB img {
+        height: 50px;
+        display: none;
     }
 }
 
