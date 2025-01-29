@@ -13,7 +13,7 @@ body {
     padding: 10px 20px;
     position: sticky;
     top: 0;
-    display: none;
+    display: flex;
 }
 
 .logo img {
