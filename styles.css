@@ -28,6 +28,14 @@ body {
     padding: 0;
 }
 
+.header {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
 .menu li a {
     text-decoration: none;
     color: white;
