@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>CSC Services Website</title>
+        <title>Contact Us</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -37,14 +37,36 @@
             </div>
         </header>
         
+        <div class="hero">
+            <!-- Placeholder for image -->
+        </div>
+
+        <div class="contact-container">
+            <h1>Contact Us</h1>
+            <div class="breadcrumb">
+                <a href="index.html" class="home">Home</a> » 
+                <span class="current">Contact Us</span>
+            </div>
+            <div class="line"></div>
+        </div>
+        
+
+        <div class="Company-name">
+            <h1>CSC SERVICES</h1>
+            <div class="breadcrumb">
+                <button id="home-btn" class="breadcrumb-btn active">Quote</button>
+                <button id="contact-btn" class="breadcrumb-btn">Details</button>
+            </div>
+            <div class="lime"></div>
+        </div>
+        
+
+
         <div class="container">
             <form action="" id="contactForm" class="contact-left">
                 <div class="contact-left-title">
-                    <h4>GET IN TOUCH</h4>
+                    <p>Request for Quote</p>
                     <hr>
-                    <h4>
-                        Get a quote by contacting us or send us a message via the form below.
-                    </h4>
                 </div>
                 <div class="alert">Your message sent</div>
     
@@ -59,15 +81,17 @@
                 </div>
 
                 <div class="inputBox">
+                    <i class='bx bxs-phone' ></i>
                     <input type="text" id="phonenumber" placeholder="Phone Number*" required/>
                 </div>
     
                 <div class="inputBox">
+                    <i class='bx bxs-comment-dots' ></i>
                     <textarea id="msgContent" cols="30" rows="10" placeholder="Message*" required></textarea>
                 </div>
     
                 <div class="inputBox">
-                    <button type="submit">Submit <img src="img/arrow_icon.png" alt=""></button>
+                    <button type="submit">Send Request</button>
                 </div>
                 
             </form>
@@ -80,60 +104,3 @@
     </body>
     
 </html>
-
-
-
-
-
-
-<!--
-
-
-    <body>
-        <div class="top-header">
-            <p>CLEANING SERVICES & LANDSCAPPING IN SELANGOR</p>
-             <a href="https://www.facebook.com" target="_blank" class="social-icon">
-                <i class="ri-facebook-fill"></i>
-             </a>
-        </div>
-        <header>
-            <div class="logo">
-                <img src="img/logo.png" alt="Company Logo" >
-            </div>
-            <ul class="navbar">
-                <li><a href="#" id="homeBtn">Home</a></li>
-                <li><a href="#" id="aboutBtn">About Us</a></li>
-                <li><a href="#" id="blogBtn">Blog</a></li>
-                <li><a href="#" class="active" id="contactBtn">Contact</a></li>
-            </ul>
-
-            <div class="main">
-                <a href="#" class="user"><i class='bx bxs-user' ></i>Sign In</a>
-                <div class="bx bx-menu" id="menu-icon"></div>
-            </div>
-        </header>
-
-        <div class="contact-container">
-            <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
-                <div class="contact-left-title">
-                    <h2>Get in touch</h2>
-                    <hr>
-                </div>
-                <input type="hidden" name="access_key" value="c5995a27-c43f-45cc-8422-6438d99ce654">
-                <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
-                <input type="email" name="email" placeholder="Your email" class="contact-inputs" required>
-                <textarea name="message" placeholder="Your Message" class="contact-container" required></textarea>
-                <button type="submit">Submit <img src="img/arrow_icon.png" alt=""></button>
-            </form>
-            <div class="contact-right">
-                <img src="img/right_img.png" alt="">
-            </div>
-        </div>
-
-        <script type="text/javascript" src="js/script.js">
-
-        </script>
-    </body>
-
-
-</html> -->
