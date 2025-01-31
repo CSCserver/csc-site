@@ -11,6 +11,27 @@ document.addEventListener("DOMContentLoaded", () => {
         };
     }
 
+    const homeLBtn = document.getElementById("home-btn");
+    const contactLBtn = document.getElementById("contact-btn");
+
+    // Set "Home" as the default active button
+    homeLBtn.classList.add("active");
+    document.body.classList.add("home-active");
+
+    homeLBtn.addEventListener("click", function () {
+        homeLBtn.classList.add("active");
+        contactLBtn.classList.remove("active");
+        document.body.classList.add("home-active");
+        document.body.classList.remove("contact-active");
+    });
+
+    contactLBtn.addEventListener("click", function () {
+        contactLBtn.classList.add("active");
+        homeLBtn.classList.remove("active");
+        document.body.classList.add("contact-active");
+        document.body.classList.remove("home-active");
+    });
+
     window.addEventListener("scroll", function () {
         let header = document.querySelector("header");
         if (window.scrollY > 50) { // Change when scrolled down 50px
@@ -65,9 +86,10 @@ const firebaseConfig = {
   
     var name = getElementVal("name");
     var emailid = getElementVal("emailid");
+    var phonenumber = getElementVal("phonenumber");
     var msgContent = getElementVal("msgContent");
   
-    saveMessages(name, emailid, msgContent);
+    saveMessages(name, emailid, phonenumber, msgContent);
   
     //   enable alert
     document.querySelector(".alert").style.display = "block";
@@ -81,12 +103,13 @@ const firebaseConfig = {
     document.getElementById("contactForm").reset();
   }
   
-  const saveMessages = (name, emailid, msgContent) => {
+  const saveMessages = (name, emailid, phonenumber, msgContent) => {
     var newContactForm = contactFormDB.push();
   
     newContactForm.set({
       name: name,
       emailid: emailid,
+      phonenumber: phonenumber,
       msgContent: msgContent,
     });
   };
