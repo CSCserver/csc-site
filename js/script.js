@@ -11,6 +11,15 @@ document.addEventListener("DOMContentLoaded", () => {
         };
     }
 
+    window.addEventListener("scroll", function () {
+        let header = document.querySelector("header");
+        if (window.scrollY > 50) { // Change when scrolled down 50px
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    });
+    
     // Contact button click event
     let contactBtn = document.getElementById("contactBtn");
     let homeBtn = document.getElementById("homeBtn");
