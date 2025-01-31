@@ -26,10 +26,10 @@ body{
     color: var(--text-color);
     min-height: 100vh;
 }
-header{
-    position: relative;
+header {
+    position: fixed;
     width: 100%;
-    top: 0;
+    top: 5%;
     right: 0;
     z-index: 1000;
     background-color: var(--text-color);
@@ -37,21 +37,15 @@ header{
     align-items: center;
     justify-content: space-between;
     background: var(--bg-color);
-    padding: 0px 0%;
-    transition: all .50s ease;
-    margin-top: 5px; /* Adjust based on top header height */
-    padding: 20px 0%; /* Increase padding */
-    height: 100px; /* Double the size (original was likely 60px) */
-}
-
-/* When scrolled, make the header smaller */
-header.scrolled {
-    position: fixed;
+    padding: 20px 0%;
+    transition: all 0.5s ease;
+    height: 100px; /* Ensure this matches the header height */
 }
 
 /* Top Header Styles */
 .top-header {
     width: 100%;
+    height: 35px; /* Ensure this matches the header height */
     background: linear-gradient(to right, #e6791a, #ff9a5c);
     color: white;
     text-align: center;
@@ -61,7 +55,7 @@ header.scrolled {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative; /* Added this */
+    position: fixed; /* Added this */
     overflow: hidden; /* Prevents background from spilling */
 }
 
@@ -82,6 +76,106 @@ header.scrolled {
     position: relative; /* Ensures text and icons appear above the background */
     z-index: 1;
 }
+
+
+.hero {
+    width: 100%;
+    height: 350px; /* Adjust height as needed */
+    background-color: #f15a24; /* Orange placeholder */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    
+}
+
+
+.contact-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #0a0a28; /* Dark navy color */
+}
+
+.Company-name {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+
+
+/* Default button styles */
+.breadcrumb-btn {
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+/* Active button (when clicked) */
+.breadcrumb-btn.active {
+    color: #f15a24; /* Orange color */
+}
+
+/* Page-specific styles */
+body.home-active {
+    .container{
+        display: block;
+    }
+}
+
+body.contact-active {
+    .container{
+        display: none;
+    }
+}
+
+
+
+
+
+
+.breadcrumb {
+    font-size: 16px;
+    color: #f15a24; /* Orange color */
+    margin-top: 10px;
+}
+
+.breadcrumb .home {
+    color: #f15a24;
+    font-weight: bold;
+}
+
+.breadcrumb .current {
+    color: black;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #f15a24, transparent);
+    margin-top: 10px;
+}
+
+.lime {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #ffffff, transparent);
+    margin-top: 10px;
+}
+
+
+
 
 
 
@@ -166,8 +260,6 @@ header.scrolled {
     margin-right: 7px;
 }
 
-@media (max-width: 800px) {
-}
 
 @media (max-width: 1280px) {
     header{
@@ -246,11 +338,11 @@ header.scrolled {
     text-align: center;
     padding: 10px 10px;
     width: 43%;
-    height: 100%;
+    height: 80%;
     padding: 20px;
     
     position: absolute;
-    top: 80%;
+    top: 125%;
     left: 72%;
     transform: translate(-50%, -50%);
     background: #ffffff;
@@ -268,13 +360,25 @@ header.scrolled {
 }
 
 .container .contact-left-title{
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    position: relative; /* Added this */
+    overflow: hidden; /* Prevents background from spilling */
+    top: 0;
+    right: 0;
     color: #000000;
-    padding: 10px 10px;
+    padding: 10px 0%;
     text-align: left;
     font-size: 0.9rem;
     font-weight: 400;
     font-size: large;
 }
+
 
 .inputBox{
     width: 100%;
@@ -296,23 +400,26 @@ header.scrolled {
     border-bottom: 1px solid #ddd; /* Adds a line above each menu item */
 }
 
-.inputBox textarea{
-    width: 100%;
-    height: 120px;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    overflow: hidden;
-    border: 1px solid rgba(0,0,0,0.2);
-    padding: 0px 10px;
+.inputBox textarea {
+    width: 85%;
+    height: 120px; /* Ensure this is consistent */
+    border-style: solid;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: #fafafa;
+    padding: 10px;
     font-size: 16px;
     color: #444;
+    resize: none; /* Prevents resizing */
+    overflow-y: auto; /* Allows scrolling if content exceeds height */
 }
 
+
 .inputBox button{
-    width: 100%;    
+    width: 90%; 
     padding: 10px 20px;
     border: none;
+    border-style: solid;
+    border: 1px solid rgba(0, 0, 0, 0.2);
     outline: none;
     background: rgb(0, 119, 255);
     color: #FFF;
@@ -331,14 +438,53 @@ header.scrolled {
     font-size: 16px;
 }
 
-.alert{
+.alert {
     width: 100%;
-    background: rgb(76, 194, 119);
-    opacity: 0.5;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-align: center;
+    background: #0faf4a; /* Green background */
+    color: white; /* White text */
+    padding: 12px 20px;
+    border-radius: 3px; /* More rounded edges */
+    text-align: left; /* Align text to the left */
+    font-size: 16px;
+    font-weight: 600;
+    display: none; /* Hidden by default */
+    opacity: 1; /* Ensure it's fully visible */
+    position: relative;
+    align-items: center;
+    gap: 10px; /* Spacing between icon and text */
+}
+
+/* Add info icon */
+.alert::before {
+    content: "ℹ️"; /* Info symbol */
     font-size: 18px;
-    font-weight: 900;
-    display: none;
+}
+
+@media (max-width: 680px) {
+    .container{
+    text-align: center;
+    padding: 10px 10px;
+    width: 100%;
+    height: 80%;
+    padding: 20px;
+    
+    position: absolute;
+    top: 138%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    flex-direction: column;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid #ddd; /* Adds a line above each menu item */
+    }
+    .breadcrumb-btn {
+        display: inline;
+    }
+    .lime {
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(to right, #f15a24, transparent);
+        margin-top: 10px;
+    }
+
 }
