@@ -36,12 +36,17 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: transparent;
+    background: var(--bg-color);
     padding: 0px 0%;
     transition: all .50s ease;
     margin-top: 5px; /* Adjust based on top header height */
     padding: 20px 0%; /* Increase padding */
     height: 100px; /* Double the size (original was likely 60px) */
+}
+
+/* When scrolled, make the header smaller */
+header.scrolled {
+    position: fixed;
 }
 
 /* Top Header Styles */
@@ -97,7 +102,7 @@ header{
     align-items: center;
 }
 .logo img {
-    height: 50px;
+    height: 83px;
     padding: 6px 15%;
 }
 .logo i{
