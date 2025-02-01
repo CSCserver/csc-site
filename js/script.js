@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
         };
     }
 
-    const homeLBtn = document.getElementById("home-btn");
-    const contactLBtn = document.getElementById("contact-btn");
+    let homeLBtn = document.getElementById("home-btn");
+    let contactLBtn = document.getElementById("contact-btn");
 
     // Set "Home" as the default active button
     homeLBtn.classList.add("active");
